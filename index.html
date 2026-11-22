@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جنگنده های ایران | Iran Air Force</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+ --yellow:#ffd600;
+ --bg:#090b10;
+ --glass:rgba(255,255,255,.055);
+ --border:rgba(255,255,255,.11);
+}
+
+* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:'Vazirmatn',sans-serif;
+ scroll-behavior:smooth;
+}
+
+body {
+ background:
+ radial-gradient(ellipse at 80% 0%,#33270055,transparent 40%),
+ var(--bg);
+ color:white;
+ overflow-x:hidden;
+}
+
+a {text-decoration:none;color:inherit}
+
+.container {
+ width:88%;
+ max-width:1250px;
+ margin:auto;
+}
+
+/* NAVBAR */
+
+nav {
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:rgba(9,11,16,.85);
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--border);
+}
+
+.nav-content {
+ min-height:80px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:20px;
+}
+
+.logo {
+ font-size:21px;
+ font-weight:800;
+ color:var(--yellow);
+}
+
+.logo i {margin-left:8px}
+
+.nav-links {
+ display:flex;
+ gap:30px;
+ list-style:none;
+ color:#ccc;
+ font-size:14px;
+}
+
+.nav-links a:hover {color:var(--yellow)}
+
+.nav-btn {
+ padding:10px 20px;
+ border-radius:10px;
+ background:var(--yellow);
+ color:#111;
+ font-weight:800;
+ font-size:13px;
+}
+
+/* HERO */
+
+.hero {
+ min-height:520px;
+ display:flex;
+ align-items:center;
+ padding:80px 0;
+}
+
+.hero-box {
+ width:100%;
+ padding:65px;
+ border:1px solid #ffd60035;
+ border-radius:28px;
+ background:linear-gradient(120deg,#ffd60012,#ffffff05);
+ backdrop-filter:blur(15px);
+ position:relative;
+ overflow:hidden;
+}
+
+.hero-box:after {
+ content:"✈";
+ position:absolute;
+ left:5%;
+ top:15%;
+ font-size:190px;
+ color:#ffd60012;
+ transform:rotate(-15deg);
+}
+
+.hero-tag {
+ display:inline-block;
+ color:var(--yellow);
+ border:1px solid #ffd60055;
+ padding:7px 15px;
+ border-radius:30px;
+ font-size:12px;
+ margin-bottom:25px;
+}
+
+.hero h1 {
+ font-size:clamp(32px,5vw,57px);
+ font-weight:800;
+ line-height:1.6;
+ max-width:700px;
+ position:relative;
+ z-index:2;
+}
+
+.hero h1 span {color:var(--yellow)}
+
+.hero p {
+ color:#aaa;
+ max-width:600px;
+ line-height:2.3;
+ margin-top:15px;
+ position:relative;
+ z-index:2;
+}
+
+.hero-buttons {
+ display:flex;
+ gap:15px;
+ margin-top:30px;
+ flex-wrap:wrap;
+ position:relative;
+ z-index:2;
+}
+
+.primary-btn,.secondary-btn {
+ padding:13px 25px;
+ border-radius:10px;
+ font-size:14px;
+ font-weight:700;
+ cursor:pointer;
+}
+
+.primary-btn {
+ background:var(--yellow);
+ color:#111;
+}
+
+.secondary-btn {
+ border:1px solid var(--border);
+ color:white;
+}
+
+/* SECTION */
+
+section {
+ padding:65px 0;
+}
+
+.section-head {
+ margin-bottom:35px;
+}
+
+.section-head small {
+ color:var(--yellow);
+ letter-spacing:2px;
+}
+
+.section-head h2 {
+ font-size:30px;
+ margin-top:10px;
+}
+
+.section-head p {
+ color:#999;
+ font-size:14px;
+ margin-top:10px;
+}
+
+/* CARDS */
+
+.grid {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:24px;
+}
+
+.card {
+ background:var(--glass);
+ border:1px solid var(--border);
+ border-radius:20px;
+ padding:30px 25px;
+ transition:.3s;
+ cursor:pointer;
+ backdrop-filter:blur(15px);
+}
+
+.card:hover {
+ transform:translateY(-8px);
+ border-color:var(--yellow);
+ box-shadow:0 12px 40px #ffd60012;
+}
+
+.card-icon {
+ width:65px;
+ height:65px;
+ display:grid;
+ place-items:center;
+ background:#ffd60013;
+ border:1px solid #ffd60040;
+ border-radius:18px;
+ color:var(--yellow);
+ font-size:28px;
+ margin-bottom:22px;
+}
+
+.card h3 {
+ font-size:20px;
+ margin-bottom:12px;
+}
+
+.card p {
+ color:#999;
+ font-size:13px;
+ line-height:2;
+}
+
+.card-link {
+ color:var(--yellow);
+ font-size:13px;
+ font-weight:bold;
+ display:inline-block;
+ margin-top:20px;
+}
+
+/* ABOUT */
+
+.about {
+ background:var(--glass);
+ border:1px solid var(--border);
+ border-radius:22px;
+ padding:35px;
+ line-height:2.4;
+ color:#bbb;
+}
+
+.about h2 {
+ color:var(--yellow);
+ margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer {
+ border-top:1px solid var(--border);
+ background:#ffffff05;
+ padding:45px 0 20px;
+ margin-top:70px;
+}
+
+.footer-content {
+ display:flex;
+ justify-content:space-between;
+ gap:30px;
+ flex-wrap:wrap;
+}
+
+.footer-title {
+ color:var(--yellow);
+ font-weight:800;
+ font-size:20px;
+ margin-bottom:12px;
+}
+
+.footer-text {
+ color:#888;
+ font-size:13px;
+ line-height:2.4;
+}
+
+.footer-bottom {
+ border-top:1px solid var(--border);
+ text-align:center;
+ color:#777;
+ padding-top:20px;
+ margin-top:30px;
+ font-size:12px;
+}
+
+/* MODAL */
+
+.modal {
+ position:fixed;
+ inset:0;
+ z-index:200;
+ background:#000c;
+ backdrop-filter:blur(8px);
+ display:none;
+ justify-content:center;
+ align-items:center;
+ padding:20px;
+}
+
+.modal-box {
+ width:100%;
+ max-width:480px;
+ background:#151820;
+ border:1px solid #ffd60070;
+ border-radius:22px;
+ padding:35px;
+ text-align:center;
+ animation:show .3s ease;
+}
+
+.modal-box i {
+ color:var(--yellow);
+ font-size:45px;
+ margin-bottom:20px;
+}
+
+.modal-box h2 {
+ color:var(--yellow);
+ margin-bottom:15px;
+}
+
+.modal-box p {
+ color:#ccc;
+ line-height:2.4;
+ font-size:14px;
+}
+
+.close {
+ background:var(--yellow);
+ border:none;
+ padding:12px 40px;
+ border-radius:10px;
+ margin-top:25px;
+ font-weight:800;
+ cursor:pointer;
+}
+
+@keyframes show {
+ from {opacity:0;transform:translateY(20px)}
+ to {opacity:1;transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+ .grid {grid-template-columns:repeat(2,1fr)}
+ .nav-links {gap:13px}
+ .hero-box {padding:35px}
+}
+
+@media(max-width:600px) {
+ .container {width:92%}
+ .grid {grid-template-columns:1fr}
+ .nav-links {display:none}
+ .hero {min-height:430px;padding:40px 0}
+ .hero-box {padding:30px 22px}
+ .hero-box:after {font-size:100px}
+ .section-head h2 {font-size:25px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+ <div class="container nav-content">
+  <div class="logo">
+   <i class="fa-solid fa-plane"></i>
+   آسمان ایران
+  </div>
+
+  <ul class="nav-links">
+   <li><a href="#home">خانه</a></li>
+   <li><a href="#fighters">جنگنده‌ها</a></li>
+   <li><a href="#about">درباره سایت</a></li>
+   <li><a href="#footer">ارتباط</a></li>
+  </ul>
+
+  <a href="#fighters" class="nav-btn">شروع بازدید</a>
+ </div>
+</nav>
+
+<!-- HERO -->
+<main>
+<div class="container">
+ <div class="hero" id="home">
+  <div class="hero-box">
+
+   <span class="hero-tag">
+    <i class="fa-solid fa-star"></i>
+    دانشنامه هوانوردی
+   </span>
+
+   <h1>
+    آشنایی با <span>جنگنده‌های ایران</span>
+    <br>
+    در یک نگاه
+   </h1>
+
+   <p>
+    در این وب‌سایت با تعدادی از هواپیماهای نظامی شناخته‌شده
+    ایران، تاریخچه و معرفی عمومی آن‌ها آشنا می‌شویم.
+   </p>
+
+   <div class="hero-buttons">
+    <a href="#fighters" class="primary-btn">
+     مشاهده جنگنده‌ها
+     <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <a href="#about" class="secondary-btn">
+     درباره پروژه
+    </a>
+   </div>
+
+  </div>
+ </div>
+</div>
+
+<!-- FIGHTERS -->
+<section id="fighters">
+ <div class="container">
+
+  <div class="section-head">
+   <small>IRAN AIRCRAFT</small>
+   <h2>معرفی هواپیماها</h2>
+   <p>برای مشاهده توضیحات هر هواپیما روی کارت آن کلیک کنید.</p>
+  </div>
+
+  <div class="grid" id="cards"></div>
+
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="container">
+  <div class="about">
+   <h2>
+    <i class="fa-solid fa-circle-info"></i>
+    درباره این وب‌سایت
+   </h2>
+   این وب‌سایت یک پروژه آموزشی برای آشنایی با تاریخچه
+   و هواپیماهای نظامی شناخته‌شده مرتبط با ایران است.
+   مطالب آن با هدف معرفی عمومی هوانوردی تهیه شده‌اند.
+  </div>
+ </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+ <div class="container">
+
+  <div class="footer-content">
+
+   <div>
+    <div class="footer-title">
+     <i class="fa-solid fa-plane"></i>
+     آسمان ایران
+    </div>
+    <p class="footer-text">
+     دانشنامه کوچک آشنایی با تاریخ هوانوردی ایران
+    </p>
+   </div>
+
+   <div>
+    <div class="footer-title">بخش‌های سایت</div>
+    <p class="footer-text">
+     <a href="#home">صفحه اصلی</a><br>
+     <a href="#fighters">معرفی هواپیماها</a><br>
+     <a href="#about">درباره پروژه</a>
+    </p>
+   </div>
+
+   <div>
+    <div class="footer-title">تهیه‌کننده</div>
+    <p class="footer-text">
+     علی اصغر ملازاده<br>
+     کلاس نهم دو
+    </p>
+   </div>
+
+  </div>
+
+  <div class="footer-bottom">
+   تمامی حقوق این پروژه متعلق به تهیه‌کننده آن است.
+   <br>
+   © 2026
+  </div>
+
+ </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+ <div class="modal-box">
+  <i class="fa-solid fa-jet-fighter"></i>
+  <h2 id="modalTitle"></h2>
+  <p id="modalText"></p>
+  <button class="close" onclick="closeModal()">
+   <i class="fa-solid fa-xmark"></i>
+   خروج
+  </button>
+ </div>
+</div>
+
+<script>
+const planes = [
+{
+name:"F-14 تامکت",
+icon:"fa-plane",
+text:"F-14 تامکت یک جنگنده ساخت آمریکا است که پیش از انقلاب وارد نیروی هوایی ایران شد. این هواپیما از شناخته‌شده‌ترین هواپیماهای نظامی ایران است."
+},
+{
+name:"F-4 فانتوم",
+icon:"fa-jet-fighter",
+text:"F-4 فانتوم یک هواپیمای نظامی چندمنظوره ساخت آمریکا است که از دهه ۱۳۴۰ در نیروی هوایی ایران حضور داشته است."
+},
+{
+name:"F-5 تایگر",
+icon:"fa-plane",
+text:"F-5 تایگر یک جنگنده سبک ساخت آمریکا است که در تاریخ نیروی هوایی ایران جایگاه شناخته‌شده‌ای دارد."
+},
+{
+name:"میگ ۲۹",
+icon:"fa-jet-fighter",
+text:"میگ ۲۹ یک جنگنده ساخت شوروی سابق است که در اواخر دهه ۱۳۶۰ وارد نیروی هوایی ایران شد."
+},
+{
+name:"صاعقه",
+icon:"fa-plane",
+text:"صاعقه یک هواپیمای نظامی ایرانی است که در ایران توسعه داده شده و از نظر طراحی به خانواده F-5 شباهت دارد."
+},
+{
+name:"کوثر",
+icon:"fa-jet-fighter",
+text:"کوثر یک هواپیمای نظامی ایرانی است که در سال ۱۳۹۷ معرفی شد و بر پایه طرح خانواده F-5 توسعه یافته است."
+}
+];
+
+const cards=document.getElementById("cards");
+
+planes.forEach((plane,index)=>{
+ cards.innerHTML+=`
+ <article class="card" onclick="openModal(${index})">
+  <div class="card-icon">
+   <i class="fa-solid ${plane.icon}"></i>
+  </div>
+  <h3>${plane.name}</h3>
+  <p>آشنایی با تاریخچه و معرفی عمومی این هواپیما</p>
+  <span class="card-link">
+   مشاهده توضیحات
+   <i class="fa-solid fa-arrow-left"></i>
+  </span>
+ </article>`;
+});
+
+function openModal(index){
+ document.getElementById("modalTitle").innerText=planes[index].name;
+ document.getElementById("modalText").innerText=planes[index].text;
+ document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+ document.getElementById("modal").style.display="none";
+}
+
+document.getElementById("modal").addEventListener("click",e=>{
+ if(e.target.id==="modal") closeModal();
+});
+
+document.addEventListener("keydown",e=>{
+ if(e.key==="Escape") closeModal();
+});
+</script>
+
+</body>
+</html>
